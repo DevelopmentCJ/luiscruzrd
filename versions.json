@@ -1,0 +1,12 @@
+{
+    "versions": [
+        {
+            "number": "1.2.0",
+            "features": [
+                "Se corrigó el error del servidor de archivos estáticos para que no diga cannot get al acceder por una ruta diferente a la raiz",
+                "En el dashboard, se colocó la última fila en la tabla para contar y totalizar los productos en proceso de levantamiento de maestro",
+                "En el formulario de productos, al colocar el codigo de barras ya registrado, carga un cuadro modal con las variaciones de ese registro para poder ir a editarlo o cerrar el cuadro"
+            ]
+        }
+    ]
+}
