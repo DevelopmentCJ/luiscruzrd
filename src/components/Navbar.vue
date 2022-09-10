@@ -52,7 +52,7 @@
         >
         <!-- End Option -->
         <!-- Start Option -->
-        <a
+        <!-- <a
           v-if="
             this.$store.state.user.type == 'Power User' ||
               this.$store.state.user.type == 'Administrador' ||
@@ -62,7 +62,7 @@
           @click="this.hamburger('Productos')"
           href="#"
           ><i class="fas fa-box"></i> Productos</a
-        >
+        > -->
         <!-- End Option -->
         <!-- Start Option -->
         <!-- <a
@@ -306,6 +306,7 @@
         <div class="mycontainer">
           <a
             class="item navbar-brand"
+            style="text-decoration: none; margin: 7px"
             @click="this.$router.push(`/dashboard`)"
             href="#"
           >

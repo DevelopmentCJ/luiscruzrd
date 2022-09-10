@@ -4,7 +4,13 @@ export interface Usuario {
   email: string;
   password: string;
   role: string;
+  cedula: string;
   nombre: string;
+  apellido: string;
+  telefono: string;
+  provincia: string;
+  sector: string;
+  quiero: string;
   grupo: string;
   puedeVer: string;
   aseguradoras: string;

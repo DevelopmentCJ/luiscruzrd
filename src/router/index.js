@@ -4,7 +4,7 @@ import store from "../store";
 
 import GuestLayout from "../layouts/GuestLayout.vue";
 import LogIn from "../views/LogInView.vue";
-import SignUp from "../views/SignUpView.vue";
+// import SignUp from "../views/SignUpView.vue";
 
 import DashboardLayout from "../layouts/DashboardLayout.vue";
 import Dashboard from "../views/DashboardView.vue";
@@ -92,11 +92,11 @@ const routes = [
         name: "LogIn",
         component: LogIn,
       },
-      {
-        path: "/signup",
-        name: "SignUp",
-        component: SignUp,
-      },
+      // {
+      //   path: "/signup",
+      //   name: "SignUp",
+      //   component: SignUp,
+      // },
     ],
   },
   {
