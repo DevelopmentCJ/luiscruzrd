@@ -19,7 +19,10 @@
           ><i class="fa fa-envelope"></i> CONTACTO</a
         >
         <a href="#SoyMiembro" class="w3-bar-item w3-button"
-          ><i class="fas fa-sign-in-alt"></i> SOY MIEMBRO</a
+          ><i class="fas fa-sign-in-alt"></i> REGISTRARME</a
+        >
+        <a href="#SoyMiembro2" class="w3-bar-item w3-button"
+          ><i class="fas fa-sign-in-alt"></i> INICIAR SESION</a
         >
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -27,7 +30,7 @@
       <a
         href="javascript:void(0)"
         class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-        onclick="w3_open()"
+        @click="w3_open()"
       >
         <i class="fa fa-bars"></i>
       </a>
@@ -41,25 +44,28 @@
   >
     <a
       href="javascript:void(0)"
-      onclick="w3_close()"
+      @click="w3_close()"
       class="w3-bar-item w3-button w3-large w3-padding-16"
       >Cerrar ×</a
     >
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"
+    <a href="#about" @click="w3_close()" class="w3-bar-item w3-button"
       >ACERCA</a
     >
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"
+    <a href="#team" @click="w3_close()" class="w3-bar-item w3-button"
       >COLABORADORES</a
     >
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">LABOR</a>
-    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"
+    <a href="#work" @click="w3_close()" class="w3-bar-item w3-button">LABOR</a>
+    <a href="#pricing" @click="w3_close()" class="w3-bar-item w3-button"
       >UNETE</a
     >
-    <a href="#Contactar" onclick="w3_close()" class="w3-bar-item w3-button"
+    <a href="#Contactar" @click="w3_close()" class="w3-bar-item w3-button"
       >CONTACTO</a
     >
-    <a href="#SoyMiembro" onclick="w3_close()" class="w3-bar-item w3-button"
-      >SOY MIEMBRO</a
+    <a href="#SoyMiembro" @click="w3_close()" class="w3-bar-item w3-button"
+      >REGISTRARME</a
+    >
+    <a href="#SoyMiembro2" @click="w3_close()" class="w3-bar-item w3-button"
+      >INICIAR SESION</a
     >
   </nav>
   <div class="general">
@@ -860,7 +866,7 @@
           /> -->
           </div>
         </div>
-        <div class="w3-container" style="padding:128px 16px" id="SoyMiembro">
+        <div class="w3-container" style="padding:128px 16px" id="SoyMiembro2">
           <h3 class="w3-center">Iniciar Sesión</h3>
           <p class="w3-center w3-large">
             Por favor, ingrese sus credenciales:
@@ -966,6 +972,18 @@ export default {
   },
 
   methods: {
+    w3_close() {
+      var mySidebar = document.getElementById("mySidebar");
+      mySidebar.style.display = "none";
+    },
+    w3_open() {
+      var mySidebar = document.getElementById("mySidebar");
+      if (mySidebar.style.display === "block") {
+        mySidebar.style.display = "none";
+      } else {
+        mySidebar.style.display = "block";
+      }
+    },
     defRole(quiero: string) {
       switch (quiero) {
         case "Ser Comunitario":
@@ -1090,7 +1108,7 @@ export default {
   grid-auto-flow: dense;
   grid-template-rows: auto auto;
   gap: 3px;
-  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
 .error {
